@@ -180,9 +180,7 @@
 
                   // Format the date of birth
                   var dob = new Date(data.dateOfBirth);
-                  var formattedDOB = `${
-                    dob.getMonth() + 1
-                  }/${dob.getDate()}/${dob.getFullYear()}`;
+                  var formattedDOB = dob.toISOString().split("T")[0];
                   document.getElementById("date-of-birth").value = formattedDOB;
 
                   document.getElementById("unsettled-amount").value =
