@@ -103,8 +103,13 @@
                     data.customerName;
                   document.getElementById("gender").value = data.gender;
                   document.getElementById("location").value = data.location;
-                  document.getElementById("date-of-birth").value =
-                    data.dateOfBirth;
+
+                  // Format the date of birth
+                  var dob = new Date(data.dateOfBirth);
+                  var formattedDOB =
+                    "${dob.getDate()}-${dob.getMonth() + 1}-${dob.getFullYear()}";
+                  document.getElementById("date-of-birth").value = formattedDOB;
+
                   document.getElementById("unsettled-amount").value =
                     data.unsettledAmount;
                   document.getElementById("discount-amount").value =
