@@ -40,7 +40,7 @@
                 <label>Customer Name</label>
                 <input
                   type="text"
-                  placeholder="Enter Customer Name"
+                  placeholder="Customer Name"
                   id="customer-name"
                   name="Customer Name"
                   readonly
@@ -51,7 +51,7 @@
                 <label>Location</label>
                 <input
                   type="text"
-                  placeholder="Enter Location"
+                  placeholder="Location"
                   id="location"
                   readonly
                 />
@@ -60,7 +60,7 @@
                 <label>Date of Birth</label>
                 <input
                   type="date"
-                  placeholder="Enter birth date"
+                  placeholder="birth date"
                   name="Date of Birth"
                   id="date-of-birth"
                   min="1000-01-01"
@@ -69,17 +69,12 @@
               </div>
               <div class="input-field">
                 <label>Gender</label>
-                <input
-                  type="text"
-                  placeholder="Enter Gender"
-                  id="gender"
-                  readonly
-                />
+                <input type="text" placeholder="Gender" id="gender" readonly />
               </div>
 
               <div class="input-field">
                 <label>Dispositioned By</label>
-                <select name="Dispositioned By" required>
+                <select name="Dispositioned By" id="Dispositioned" required>
                   <option disabled selected>Select Employeer Name</option>
 
                   <option value="Mohamed Refai">Mohamed Refai</option>
@@ -124,7 +119,7 @@
               </div>
               <div class="input-field">
                 <label>Credited Transaction Mode</label>
-                <select name="Credited Transaction Mode" id="" required>
+                <select name="Credited Transaction Mode" id="credited-transaction-mode" required>
                   <option disabled selected>Select Transaction Mode</option>
                   <option value="In-Hand Cash">In-Hand Cash</option>
                   <option value="Online Transaction - UPI">
@@ -137,7 +132,7 @@
                 <label>Unsettled Amount</label>
                 <input
                   type="text"
-                  placeholder="Enter Unsettled Amount"
+                  placeholder="Unsettled Amount"
                   id="unsettled-amount"
                   readonly
                 />
@@ -147,7 +142,7 @@
                 <label>Discount Amount</label>
                 <input
                   type="text"
-                  placeholder="Enter Discount Amount"
+                  placeholder="Discount Amount"
                   id="discount-amount"
                   readonly
                 />
@@ -169,7 +164,7 @@
           var mobileNumber = this.value;
           if (mobileNumber.length === 10) {
             fetch(
-              "https://script.google.com/macros/s/AKfycbwnzspk44rTUmVEONqcM-S1Lhf-OS2zSDZGXLnCkKfVC1Mp0xh4c8TWVyY9pgXZ5DtQ/exec?mobileNumber=" +
+              "https://script.google.com/macros/s/AKfycbwh1e3JZmncFxkg3DO4FPE9alCjWm-VqkcO-QnqIarDcntHSTHkAYjEsVwQtKQBop0/exec?mobileNumber=" +
                 mobileNumber
             )
               .then((response) => response.json())
